@@ -1,0 +1,20 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title><%= @article.title %></title>
+    </head>
+    
+    <body>
+        <h1>"this is even better than the last"</h1>
+        
+        <h2><%= @article.title %></h2>
+        <p><%= @article.content %></p>
+
+        <form method="post" action="/articles/<%= @article.id %>">
+            <input type="hidden" name="_method" value="delete">
+  
+            <input type="submit" value="delete" id="hidden">
+        </form>
+    </body>
+</html>
